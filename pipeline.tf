@@ -14,7 +14,7 @@ resource "google_compute_instance" "concourse" {
       image = "debian-cloud/debian-9"
     }
   }
-  metadata {
+  metadata = {
     startup-script = <<SCRIPT
 #!/bin/bash
 apt-get update && \
